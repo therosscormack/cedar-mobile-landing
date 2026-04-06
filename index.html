@@ -21,50 +21,65 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 30px 20px;
     }
 
-    /* BRAND ANCHOR HEADER */
-    .header {
-      text-align: center;
+    /* HERO WRAP (subtle premium band) */
+    .hero-wrap {
+      background: linear-gradient(
+        to bottom,
+        rgba(18,236,137,0.06),
+        rgba(255,255,255,0)
+      );
+      border-radius: 20px;
+      padding: 30px 20px 10px;
       margin-bottom: 20px;
     }
 
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: -20px;
+    }
+
     .badge {
-      width: 540px; /* BIGGER, dominant */
-      max-width: 95%;
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 2;
     }
 
     /* HERO */
     .hero {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .hero h1 {
-      font-size: 46px;
+      font-size: 38px;
       font-weight: 600;
-      margin-bottom: 20px;
-      letter-spacing: -0.8px;
+      margin-bottom: 15px;
+      letter-spacing: -0.6px;
     }
 
     .hero p {
-      font-size: 20px; /* BIGGER */
+      font-size: 19px;
       color: #555;
-      margin-bottom: 30px;
-      max-width: 700px;
+      margin-bottom: 25px;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
     }
 
+    /* CTA */
     .cta {
       display: inline-block;
       background: #12EC89;
       color: #000;
-      padding: 14px 34px;
-      border-radius: 30px;
+      padding: 12px 30px;
+      border-radius: 28px;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 8px 20px rgba(18,236,137,0.25);
@@ -79,48 +94,48 @@
     /* TRUST */
     .trust {
       text-align: center;
-      font-size: 18px; /* BIGGER */
+      font-size: 18px;
       font-weight: 500;
       color: #444;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
 
     /* SECTION TITLE */
     .section-title {
       text-align: center;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 600;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     /* SPLIT */
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 40px;
       align-items: center;
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     .split img {
       width: 100%;
-      height: 520px;
+      height: 420px;
       object-fit: cover;
-      border-radius: 18px;
+      border-radius: 16px;
     }
 
-    /* FEATURE STACK */
+    /* FEATURES */
     .feature-stack {
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 16px;
     }
 
     .feature {
-      padding: 22px;
-      border-radius: 14px;
+      padding: 18px;
+      border-radius: 12px;
       background: #ffffff;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
       border: 1px solid #eee;
       transition: 0.2s;
     }
@@ -130,50 +145,69 @@
     }
 
     .feature h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 16px;
+      margin-bottom: 6px;
     }
 
     .feature p {
-      font-size: 14px;
+      font-size: 13px;
       color: #555;
     }
 
-    /* FINAL CTA */
+    /* CTA SECTION */
     .cta-section {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .cta-section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
 
     /* FOOTER */
     .footer {
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       color: #888;
-      margin-top: 80px;
+      margin-top: 60px;
     }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
+    /* TABLET */
+    @media (max-width: 900px) {
+      .container {
+        max-width: 720px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
       .split {
         grid-template-columns: 1fr;
       }
 
       .split img {
-        height: 320px;
+        height: 300px;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 480px) {
+      .badge {
+        max-width: 260px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 28px;
       }
 
-      .badge {
-        width: 320px;
+      .hero p {
+        font-size: 16px;
+      }
+
+      .trust {
+        font-size: 15px;
       }
     }
 
@@ -184,18 +218,22 @@
 
   <div class="container">
 
-    <!-- BRAND ANCHOR BADGE -->
-    <div class="header">
-      <img src="badge.png" alt="Cedar Mobile" class="badge">
-    </div>
+    <div class="hero-wrap">
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>Global eSIMs for High-Speed Data Connectivity</h1>
-      <p>
-        Deliver seamless mobile data across 200+ countries with instant activation, transparent pricing, and no operational overhead.
-      </p>
-      <a href="https://www.cedarmobile.com" class="cta">Get Started</a>
+      <!-- BADGE -->
+      <div class="header">
+        <img src="badge.png" alt="Cedar Mobile" class="badge">
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <h1>Global eSIMs for High-Speed Data Connectivity</h1>
+        <p>
+          Deliver seamless mobile data across 200+ countries with instant activation, transparent pricing, and no operational overhead.
+        </p>
+        <a href="https://www.cedarmobile.com" class="cta">Get Started</a>
+      </div>
+
     </div>
 
     <!-- TRUST -->
@@ -203,7 +241,7 @@
       Used by professionals globally
     </div>
 
-    <!-- SECTION TITLE -->
+    <!-- TITLE -->
     <div class="section-title">
       Built for Travel, Enterprise & Global Teams
     </div>
@@ -211,37 +249,35 @@
     <!-- SPLIT -->
     <div class="split">
 
-      <!-- IMAGE -->
-      <img src="business.jpg" alt="Business traveller using mobile device">
+      <img src="business.jpg" alt="Business traveller">
 
-      <!-- FEATURES -->
       <div class="feature-stack">
 
         <div class="feature">
           <h3>Global Coverage</h3>
-          <p>Reliable connectivity across 200+ countries with consistent performance.</p>
+          <p>Reliable connectivity across 200+ countries.</p>
         </div>
 
         <div class="feature">
           <h3>Instant Setup</h3>
-          <p>Activate your eSIM in minutes with no physical SIM or logistics.</p>
+          <p>Activate your eSIM in minutes.</p>
         </div>
 
         <div class="feature">
           <h3>No Roaming Fees</h3>
-          <p>Transparent pricing with no hidden charges or unexpected costs.</p>
+          <p>Transparent pricing with no hidden charges.</p>
         </div>
 
         <div class="feature">
           <h3>Enterprise Ready</h3>
-          <p>Trusted by professionals and teams operating globally.</p>
+          <p>Trusted by global professionals.</p>
         </div>
 
       </div>
 
     </div>
 
-    <!-- FINAL CTA -->
+    <!-- CTA -->
     <div class="cta-section">
       <h2>Start using Cedar Mobile today</h2>
       <a href="https://www.cedarmobile.com" class="cta">Get Started</a>
