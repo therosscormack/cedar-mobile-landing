@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cedar Mobile | Global eSIM for Professionals</title>
 
-  <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -27,27 +26,29 @@
       padding: 40px 20px;
     }
 
-    /* HEADER (BIG BADGE) */
+    /* BIG BADGE HERO */
     .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      width: 420px; /* BIGGER */
+      max-width: 95%;
+      margin-bottom: 10px;
+    }
+
+    /* HERO TEXT */
+    .hero {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .badge {
-      width: 320px;
-      max-width: 90%;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      margin-bottom: 70px;
-    }
-
     .hero h1 {
-      font-size: 44px;
+      font-size: 46px;
       font-weight: 600;
       margin-bottom: 20px;
+      letter-spacing: -0.5px;
     }
 
     .hero p {
@@ -60,10 +61,16 @@
       display: inline-block;
       background: #12EC89;
       color: #000;
-      padding: 14px 30px;
+      padding: 14px 32px;
       border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
     }
 
     /* TRUST */
@@ -71,36 +78,51 @@
       text-align: center;
       font-size: 15px;
       color: #777;
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
 
-    /* SPLIT SECTION */
+    /* SECTION TITLE */
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    /* SPLIT LAYOUT */
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 60px;
       align-items: center;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
     }
 
     .split img {
       width: 100%;
-      height: 500px;
+      height: 520px;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 18px;
     }
 
-    /* FEATURES STACK */
+    /* FEATURE STACK */
     .feature-stack {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 22px;
     }
 
     .feature {
-      padding: 20px;
-      border-radius: 12px;
-      background: #f7f7f7;
+      padding: 22px;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+      transition: 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-2px);
     }
 
     .feature h3 {
@@ -113,12 +135,23 @@
       color: #555;
     }
 
+    /* SECOND CTA */
+    .cta-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
     /* FOOTER */
     .footer {
       text-align: center;
       font-size: 14px;
       color: #888;
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     /* MOBILE */
@@ -134,6 +167,10 @@
       .hero h1 {
         font-size: 34px;
       }
+
+      .badge {
+        width: 280px;
+      }
     }
 
   </style>
@@ -143,15 +180,15 @@
 
   <div class="container">
 
-    <!-- BIG BADGE -->
+    <!-- HUGE BADGE -->
     <div class="header">
       <img src="badge.png" alt="Cedar Mobile" class="badge">
     </div>
 
     <!-- HERO -->
     <div class="hero">
-      <h1>Stay Connected Worldwide</h1>
-      <p>Instant eSIM for business travellers. No roaming charges. No queues. No stress.</p>
+      <h1>Global eSIM Connectivity for Modern Professionals</h1>
+      <p>Instant data access in 200+ countries. No roaming charges. No queues. No stress.</p>
       <a href="https://www.cedarmobile.com" class="cta">Get Connected</a>
     </div>
 
@@ -160,37 +197,48 @@
       Used by professionals globally
     </div>
 
-    <!-- SPLIT SECTION -->
+    <!-- SECTION TITLE -->
+    <div class="section-title">
+      Built for Travel, Enterprise & Global Teams
+    </div>
+
+    <!-- SPLIT -->
     <div class="split">
 
-      <!-- IMAGE LEFT -->
+      <!-- IMAGE -->
       <img src="business.jpg" alt="Business traveller using mobile device">
 
-      <!-- FEATURES RIGHT -->
+      <!-- FEATURES -->
       <div class="feature-stack">
 
         <div class="feature">
           <h3>Global Coverage</h3>
-          <p>Seamless connectivity across 200+ countries.</p>
+          <p>Reliable connectivity across 200+ countries with consistent performance.</p>
         </div>
 
         <div class="feature">
           <h3>Instant Setup</h3>
-          <p>Activate your eSIM in minutes. No physical SIM required.</p>
+          <p>Activate your eSIM in minutes with no physical SIM or logistics.</p>
         </div>
 
         <div class="feature">
           <h3>No Roaming Fees</h3>
-          <p>Transparent pricing with no hidden charges.</p>
+          <p>Transparent pricing with no hidden charges or unexpected costs.</p>
         </div>
 
         <div class="feature">
-          <h3>Built for Business</h3>
-          <p>Reliable connectivity trusted by global professionals.</p>
+          <h3>Enterprise Ready</h3>
+          <p>Trusted by professionals and teams operating globally.</p>
         </div>
 
       </div>
 
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="cta-section">
+      <h2>Start using Cedar Mobile today</h2>
+      <a href="https://www.cedarmobile.com" class="cta">Get Connected</a>
     </div>
 
     <!-- FOOTER -->
